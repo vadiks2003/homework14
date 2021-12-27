@@ -30,20 +30,38 @@
     {
         @extend .flexnwrap;
         justify-content: center;
-        
+        position: relative;
+        @extend .roundedges;
+
+        &__name
+        {
+            @include image("./../images/user.png");
+        }
+
+        &__email
+        {
+            @include image("./../images/email.png");
+        }
+
+        &__phone
+        {
+            @include image("./../images/phone.png");
+        }
+
         label{
-            @include image("./../images/placeholderpng.png");
+            display: inline-block;
         }
 
         input
         {
+            
             padding-left: 40px;
             width: 280px;
             line-height: 50px;
             display: inline-block;
             margin: 0 5px;
             position: relative;
-            @extend .roundedges;
+            
             
 
             &.submit{
@@ -63,10 +81,30 @@
         }
     }
 
+    &__imgbuttoncontainer
+    {
+        display: flex;
+        justify-content: center;
+        button{
+            border-radius: 10px;
+            margin: 20px 5px;
+            content: "";
+            background-color: grey;
+            width: 20px;
+            height: 20px;
+            &:focus
+            {
+                background-color: darkblue;
+            }
+        }
+    }
+
     &__img
     {
         @extend .flexnwrap;
         justify-content: center;
+
+        
         img{
             margin-top: 65px;
             width: 650px;
@@ -78,6 +116,8 @@
 @media(max-width:$breakpoint-xxl)
 {
     .contactframe{
+        height: 620px;
+
         &__img
         {
             img{
@@ -89,6 +129,14 @@
 
         &__input
         {
+            .submit{
+                margin-left: 24px;
+            }
+
+            input{
+                width: 288px;
+            }
+
             label{
                 margin-top: 20px; 
             }
@@ -100,7 +148,7 @@
 {
     .contactframe
     {
-
+        height: 800px;
         &__head
         {
             text-align: center;
@@ -111,19 +159,31 @@
 
         &__input
         {
+            .submit
+            {
+                margin-left: 132px;
+            }
+
+            label{
+                &::before{
+                    left: 28% !important;
+                }
+            }
+
             input{
                 max-width: 270px;
+                margin: 0 116px;
             }
         }
     }
 }
 
+
 @media(max-width:$breakpoint-sm)
 {
     .contactframe
     {
-        height: 750px;
-
+        
         &__head
         {
             p{
@@ -134,7 +194,7 @@
         &__input
         {
             input{
-                max-width: 280px;
+
             }
         }
     }

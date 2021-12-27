@@ -82,23 +82,21 @@ select {
   flex-wrap: wrap;
 }
 
-.roundedges, .navigation__item:hover, .contactframe__input input {
+.roundedges, .navigation__item:hover, .contactframe__input {
   border: 0;
   border-radius: 6px;
 }
 
-.imagee:not(:last-child), .contactframe__input label:not(:last-child)::before {
+.input:not(:last-child), .contactframe__input__phone:not(:last-child)::before, .contactframe__input__email:not(:last-child)::before, .contactframe__input__name:not(:last-child)::before {
   content: "";
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 26px;
+  height: 26px;
   background-size: cover;
-  position: absolute;
+  position: relative;
   z-index: 100;
-  top: 50%;
-  /* top и left ломаютт всё */
-  left: 50%;
-  transform: translate(-50%);
+  left: 14%;
+  top: 12%;
 }
 
 * {
@@ -127,10 +125,19 @@ select {
 }
 .contactframe__input {
   justify-content: center;
+  position: relative;
 }
-.contactframe__input label::before {
-  /* не работает */
-  background-image: url("./../images/placeholderpng.png");
+.contactframe__input__name::before {
+  background-image: url("./../images/user.png");
+}
+.contactframe__input__email::before {
+  background-image: url("./../images/email.png");
+}
+.contactframe__input__phone::before {
+  background-image: url("./../images/phone.png");
+}
+.contactframe__input label {
+  display: inline-block;
 }
 .contactframe__input input {
   padding-left: 40px;
@@ -151,6 +158,21 @@ select {
 .contactframe__input input.submit:hover {
   background-color: yellow;
 }
+.contactframe__imgbuttoncontainer {
+  display: flex;
+  justify-content: center;
+}
+.contactframe__imgbuttoncontainer button {
+  border-radius: 10px;
+  margin: 20px 5px;
+  content: "";
+  background-color: grey;
+  width: 20px;
+  height: 20px;
+}
+.contactframe__imgbuttoncontainer button:focus {
+  background-color: darkblue;
+}
 .contactframe__img {
   justify-content: center;
 }
@@ -161,46 +183,53 @@ select {
 }
 
 @media (max-width: 1250px) {
+  .contactframe {
+    height: 620px;
+  }
   .contactframe__img img {
     width: 325px;
     height: 175px;
     margin-top: 125px;
+  }
+  .contactframe__input .submit {
+    margin-left: 24px;
+  }
+  .contactframe__input input {
+    width: 288px;
   }
   .contactframe__input label {
     margin-top: 20px;
   }
 }
 @media (max-width: 1024px) {
+  .contactframe {
+    height: 800px;
+  }
   .contactframe__head {
     text-align: center;
   }
   .contactframe__head p {
     max-width: 500px;
   }
+  .contactframe__input .submit {
+    margin-left: 132px;
+  }
+  .contactframe__input label::before {
+    left: 28% !important;
+  }
   .contactframe__input input {
     max-width: 270px;
+    margin: 0 116px;
   }
 }
 @media (max-width: 576px) {
-  .contactframe {
-    height: 750px;
-  }
   .contactframe__head p {
     margin: 0 20px;
-  }
-  .contactframe__input input {
-    max-width: 280px;
   }
 }
 .navigation {
   align-items: center;
   justify-content: space-around;
-}
-.navigation__hiddenbutton {
-  display: none;
-  position: absolute;
-  right: 10px;
-  top: 10px;
 }
 .navigation__wrapper {
   padding: 30px 0;
@@ -280,6 +309,8 @@ select {
 .ourservices__text__item img {
   float: left;
   margin-right: 35px;
+  width: 60px;
+  height: 60px;
 }
 .ourservices__text__item h4 {
   text-transform: uppercase;

@@ -10,18 +10,17 @@
     border-radius: 6px;
 }
 
-.imagee{
+.input{
     &:not(:last-child)
     {
-    content: '';
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    background-size: cover;
-    position: absolute;
-    z-index: 100;
-    top: 50%; /* top и left ломаютт всё */
-    left: 50%;
-    transform: translate(-50%);
+        content: '';
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        background-size: cover;
+        position: relative;
+        z-index: 100; 
+        left: 14%;
+        top: 12%;
     }
 }
