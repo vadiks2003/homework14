@@ -1,0 +1,6 @@
+@mixin image($url) {
+    &::before{
+        @extend .imagee; /* не работает */
+        background-image: url($url); 
+    }
+}

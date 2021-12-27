@@ -1,0 +1,299 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.flexnwrap, .ourservices__text, .ourservices__head, .navigation, .contactframe__img, .contactframe__input, .contactframe__head {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.roundedges, .navigation__item:hover, .contactframe__input input {
+  border: 0;
+  border-radius: 6px;
+}
+
+.imagee:not(:last-child), .contactframe__input label:not(:last-child)::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-size: cover;
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  /* top и left ломаютт всё */
+  left: 50%;
+  transform: translate(-50%);
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+.contactframe {
+  height: 590px;
+  background-color: #709dca;
+}
+.contactframe h3 {
+  text-transform: uppercase;
+  font-size: 28px;
+  color: white;
+}
+.contactframe p {
+  font-size: 16px;
+  color: white;
+}
+.contactframe__head {
+  padding-top: 100px;
+  padding-bottom: 40px;
+  flex-direction: column;
+  align-items: center;
+}
+.contactframe__input {
+  justify-content: center;
+}
+.contactframe__input label::before {
+  /* не работает */
+  background-image: url("./../images/placeholderpng.png");
+}
+.contactframe__input input {
+  padding-left: 40px;
+  width: 280px;
+  line-height: 50px;
+  display: inline-block;
+  margin: 0 5px;
+  position: relative;
+}
+.contactframe__input input.submit {
+  background-color: #ffbb42;
+  padding-left: 0;
+  margin-bottom: 0;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.contactframe__input input.submit:hover {
+  background-color: yellow;
+}
+.contactframe__img {
+  justify-content: center;
+}
+.contactframe__img img {
+  margin-top: 65px;
+  width: 650px;
+  height: 350px;
+}
+
+@media (max-width: 1250px) {
+  .contactframe__img img {
+    width: 325px;
+    height: 175px;
+    margin-top: 125px;
+  }
+  .contactframe__input label {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .contactframe__head {
+    text-align: center;
+  }
+  .contactframe__head p {
+    max-width: 500px;
+  }
+  .contactframe__input input {
+    max-width: 270px;
+  }
+}
+@media (max-width: 576px) {
+  .contactframe {
+    height: 750px;
+  }
+  .contactframe__head p {
+    margin: 0 20px;
+  }
+  .contactframe__input input {
+    max-width: 280px;
+  }
+}
+.navigation {
+  align-items: center;
+  justify-content: space-around;
+}
+.navigation__hiddenbutton {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.navigation__wrapper {
+  padding: 30px 0;
+  background-color: white;
+  display: inline-block;
+}
+.navigation__item {
+  background-color: white;
+  padding: 10px 20px;
+  max-width: 80px;
+}
+.navigation__item:hover {
+  background-color: #ffbb42;
+  color: white;
+}
+.navigation__img {
+  display: inline-block;
+}
+.navigation a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+@media (max-width: 1250px) {
+  .navigation {
+    padding-top: 10px;
+  }
+  .navigation__item {
+    padding: 0px 4px;
+  }
+}
+@media (max-width: 1024px) {
+  .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .navigation img {
+    display: block;
+  }
+  .navigation__item {
+    display: block;
+    text-align: center;
+    max-width: 200px;
+    line-height: 40px;
+  }
+}
+.ourservices {
+  margin-top: 205px;
+}
+.ourservices__head {
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 90px;
+  color: #4e5d61;
+}
+.ourservices__head h3 {
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 800;
+}
+.ourservices__head p {
+  font-size: 16px;
+}
+.ourservices__text {
+  justify-content: center;
+  max-width: 1600px;
+  margin: auto;
+}
+.ourservices__text__item {
+  max-width: 540px;
+  margin-bottom: 80px;
+  margin-right: 100px;
+  color: #4e5d61;
+}
+.ourservices__text__item img {
+  float: left;
+  margin-right: 35px;
+}
+.ourservices__text__item h4 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.ourservices__text__item p {
+  padding-left: 95px;
+  max-width: 600px;
+}
+
+@media (max-width: 1250px) {
+  .ourservices__text__item {
+    max-width: 412px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

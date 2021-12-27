@@ -1,0 +1,141 @@
+.contactframe
+{
+    height: 590px;
+    background-color: $contactframe;
+
+    h3{
+        text-transform: uppercase;
+        font-size: $font-size-xxl;
+        color: white;
+    }
+
+    p{
+        font-size: $font-size-md;
+        color:white
+    }
+
+    &__head
+    {
+        padding-top: 100px;
+        padding-bottom: 40px;
+        @extend .flexnwrap;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    
+
+    &__input
+    {
+        @extend .flexnwrap;
+        justify-content: center;
+        
+        label{
+            @include image("./../images/placeholderpng.png");
+        }
+
+        input
+        {
+            padding-left: 40px;
+            width: 280px;
+            line-height: 50px;
+            display: inline-block;
+            margin: 0 5px;
+            position: relative;
+            @extend .roundedges;
+            
+
+            &.submit{
+                background-color: $selected;
+                padding-left: 0;
+                margin-bottom: 0;
+                color: white;
+                text-transform: uppercase;
+                font-size: $font-size-sm;
+
+                &:hover
+                {
+                    background-color: yellow;
+                }
+
+            }
+        }
+    }
+
+    &__img
+    {
+        @extend .flexnwrap;
+        justify-content: center;
+        img{
+            margin-top: 65px;
+            width: 650px;
+            height: 350px;
+        }
+    }
+}
+
+@media(max-width:$breakpoint-xxl)
+{
+    .contactframe{
+        &__img
+        {
+            img{
+                width: 325px;
+                height: 175px;
+                margin-top: 125px;
+            }
+        }
+
+        &__input
+        {
+            label{
+                margin-top: 20px; 
+            }
+        }
+    }
+}
+
+@media(max-width:$breakpoint-xl)
+{
+    .contactframe
+    {
+
+        &__head
+        {
+            text-align: center;
+            p{
+                max-width: 500px;
+            }
+        }
+
+        &__input
+        {
+            input{
+                max-width: 270px;
+            }
+        }
+    }
+}
+
+@media(max-width:$breakpoint-sm)
+{
+    .contactframe
+    {
+        height: 750px;
+
+        &__head
+        {
+            p{
+                margin: 0 20px;
+            }
+        }
+
+        &__input
+        {
+            input{
+                max-width: 280px;
+            }
+        }
+    }
+}
