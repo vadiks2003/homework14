@@ -18,7 +18,7 @@
     {
         padding-top: 100px;
         padding-bottom: 40px;
-        @extend .flexnwrap;
+        @extend %flexnwrap;
         flex-direction: column;
         align-items: center;
         
@@ -28,10 +28,10 @@
 
     &__input
     {
-        @extend .flexnwrap;
+        @extend %flexnwrap;
         justify-content: center;
         position: relative;
-        @extend .roundedges;
+        @extend %roundedges;
 
         &__name
         {
@@ -101,7 +101,7 @@
 
     &__img
     {
-        @extend .flexnwrap;
+        @extend %flexnwrap;
         justify-content: center;
 
         

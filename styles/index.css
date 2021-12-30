@@ -77,17 +77,17 @@ select {
     scroll-behavior: auto !important;
   }
 }
-.flexnwrap, .ourservices__text, .ourservices__head, .navigation, .contactframe__img, .contactframe__input, .contactframe__head {
+.ourservices__text, .ourservices__head, .contactframe__img, .contactframe__input, .contactframe__head, .navigation, .row {
   display: flex;
   flex-wrap: wrap;
 }
 
-.roundedges, .navigation__item:hover, .contactframe__input {
+.contactframe__input, .navigation__item:hover {
   border: 0;
   border-radius: 6px;
 }
 
-.input:not(:last-child), .contactframe__input__phone:not(:last-child)::before, .contactframe__input__email:not(:last-child)::before, .contactframe__input__name:not(:last-child)::before {
+.contactframe__input__phone:not(:last-child)::before, .contactframe__input__email:not(:last-child)::before, .contactframe__input__name:not(:last-child)::before {
   content: "";
   display: inline-block;
   width: 26px;
@@ -104,6 +104,64 @@ select {
   font-size: 16px;
 }
 
+.row {
+  flex-direction: row;
+}
+
+.navigation {
+  align-items: center;
+  justify-content: space-around;
+}
+.navigation__wrapper {
+  padding: 30px 0;
+  background-color: white;
+  display: inline-block;
+}
+.navigation__item {
+  background-color: white;
+  padding: 10px 20px;
+  max-width: 80px;
+}
+.navigation__item:hover {
+  background-color: #ffbb42;
+  color: white;
+  transition: all 0.6s;
+}
+.navigation__img {
+  display: inline-block;
+}
+.navigation a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+@media (max-width: 1250px) {
+  .navigation {
+    padding-top: 10px;
+  }
+  .navigation__item {
+    padding: 0px 4px;
+  }
+}
+@media (max-width: 1024px) {
+  .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .navigation img {
+    display: block;
+  }
+  .navigation__item {
+    display: none;
+    /*
+    display: block;
+    text-align: center;
+    max-width: 200px;
+    line-height: 40px;*/
+  }
+}
 .contactframe {
   height: 590px;
   background-color: #709dca;
@@ -227,57 +285,6 @@ select {
     margin: 0 20px;
   }
 }
-.navigation {
-  align-items: center;
-  justify-content: space-around;
-}
-.navigation__wrapper {
-  padding: 30px 0;
-  background-color: white;
-  display: inline-block;
-}
-.navigation__item {
-  background-color: white;
-  padding: 10px 20px;
-  max-width: 80px;
-}
-.navigation__item:hover {
-  background-color: #ffbb42;
-  color: white;
-}
-.navigation__img {
-  display: inline-block;
-}
-.navigation a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: black;
-}
-
-@media (max-width: 1250px) {
-  .navigation {
-    padding-top: 10px;
-  }
-  .navigation__item {
-    padding: 0px 4px;
-  }
-}
-@media (max-width: 1024px) {
-  .navigation {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  .navigation img {
-    display: block;
-  }
-  .navigation__item {
-    display: block;
-    text-align: center;
-    max-width: 200px;
-    line-height: 40px;
-  }
-}
 .ourservices {
   margin-top: 205px;
 }
@@ -325,6 +332,67 @@ select {
   .ourservices__text__item {
     max-width: 412px;
   }
+}
+.row {
+  flex-direction: row;
+}
+
+.aboutus {
+  color: white;
+}
+.aboutus__item {
+  width: 50%;
+  padding-left: 80px;
+  padding-top: 165px;
+  background-color: #ffbb42;
+}
+.aboutus__item__button {
+  margin-top: 34px;
+}
+.aboutus__item h3 {
+  text-transform: uppercase;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+.aboutus__item a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 5px;
+  border: black 3px solid;
+}
+.aboutus__item p {
+  margin-right: 266px;
+}
+.aboutus__img {
+  background-image: url("./../images/left-bg.png");
+  /* потом сделать норм*/
+  width: 50%;
+  height: 600px;
+}
+
+.choosprice {
+  height: 900px;
+  background-color: #e7edf3;
+}
+
+.howitworks {
+  height: 850px;
+  background-color: white;
+}
+
+.happyclients {
+  height: 900px;
+  background-color: #ffc155;
+}
+
+.newsettler {
+  height: 950px;
+  background-color: white;
+}
+
+.footer {
+  height: 260px;
 }
 
 /*# sourceMappingURL=index.css.map */

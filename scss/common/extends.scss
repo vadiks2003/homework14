@@ -1,16 +1,16 @@
-.flexnwrap
+%flexnwrap
 {
     display: flex;
     flex-wrap: wrap;
 }
 
-.roundedges
+%roundedges
 {
     border: 0;
     border-radius: 6px;
 }
 
-.input{
+%input{
     &:not(:last-child)
     {
         content: '';

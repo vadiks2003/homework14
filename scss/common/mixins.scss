@@ -1,6 +1,6 @@
 @mixin image($url) {
     &::before{
         background-image: url($url); 
-        @extend .input; 
+        @extend %input; 
     }
 }
