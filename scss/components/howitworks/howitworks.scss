@@ -2,4 +2,49 @@
 {
     height: 850px;
     background-color: white;
+
+    &__head
+    {
+        @extend %flexhead;
+        margin-top: 150px;
+    }
+
+    &__body
+    {
+        text-align: center;
+        .row
+        {
+            justify-content: center;
+            div
+            {
+                margin-right: 50px;
+            }
+
+            h4{
+                margin-top: 60px;
+            }
+
+            p{
+                max-width: 220px;
+            }
+        }
+
+        &__image
+        {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &__buttoncontainer
+    {
+        @extend %flexnwrap;
+        justify-content: center;
+    }
+    &__button
+    {
+        @extend %yellowbutton;
+        padding: 18px 28px;
+        margin-top: 95px;
+        
+    }
 }

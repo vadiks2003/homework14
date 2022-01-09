@@ -1,43 +1,44 @@
-.navigation
+.navigation__container .row
 {
-    @extend %flexnwrap;
     align-items: center;
     justify-content: space-around;
-
-
-    &__wrapper
+    
+    .navigation
     {
-        padding: 30px 0;
-        background-color: white;
-        display: inline-block;
-           
-    }
-
-    &__item
-    {
-        background-color: white;
-        padding: 10px 20px;
-        max-width: 80px;
-        &:hover
+        &__item
         {
-            @extend %roundedges;
-            background-color: $selected;
-            color:white;
-            transition: all 0.6s;
+            background-color: white;
+            padding: 10px 20px;
+            max-width: 80px;
+            &:hover
+            {
+                @extend %roundedges;
+                background-color: $selected;
+                color:white;
+                transition: all 0.6s;
+            }
         }
-    }
 
-    &__img
-    {
-        display: inline-block;
-    }
+        &__wrapper
+        {
+            padding: 30px 0;
+            background-color: white;
+            display: inline-block;
+            a
+            {
+                text-decoration: none;
+                text-transform: uppercase;
+                color: black;
+            }
+                
+            
+                
+        }  
 
-
-    a
-    {
-        text-decoration: none;
-        text-transform: uppercase;
-        color: black;
+        &__img
+        {
+            display: inline-block;
+        }
     }
 }
 
@@ -45,7 +46,10 @@
 {
     .navigation
     {
-        padding-top: 10px;
+        &__container
+        {
+            padding-top: 10px;
+        }  
 
         &__item
         {
@@ -58,10 +62,13 @@
 {
     .navigation
     {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        img{
+        &___container
+        {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        &__img{
             display: block;
         }
 

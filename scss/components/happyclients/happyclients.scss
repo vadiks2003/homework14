@@ -2,4 +2,64 @@
 {
     height: 900px;
     background-color: #ffc155;
+
+    &__head
+    {
+        @extend %flexhead;
+        color: white;
+        padding-top: 140px;
+        margin-bottom: 60px;
+        h3
+        {
+            text-transform: uppercase;
+        }
+    }
+
+    &__body
+    {
+        max-width: 1300px;
+        @extend %flexnwrap;
+        justify-content: center;
+        margin: 0 260px;
+        img{
+
+        }
+        &__client
+        {
+            width: 570px;
+            height: 240px;
+            background-color: white;
+            margin-right: 36px;
+            margin-bottom: 20px;
+            &__img
+            {
+                margin-left: 30px;
+                margin-top: 40px;
+                float: left;
+            }
+            &__descr
+            {
+                margin-top: 50px;
+                margin-left: 30px;
+                p{
+                    font-size: $font-size-sm;
+                    max-width: 350px;
+                }
+                :last-child
+                {
+                    margin-top: 30px;
+                }
+                &__name
+                {
+                    text-transform: uppercase;
+                    color: orange;
+                }
+                &__role
+                {
+                    text-transform: uppercase;
+                    color: grey;
+                }
+            }
+        }
+    }
 }

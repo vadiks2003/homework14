@@ -24,3 +24,26 @@
         top: 12%;
     }
 }
+
+%yellowbutton
+{
+    text-decoration: none;
+    background-color: $selected;
+    padding-left: 0;
+    margin-bottom: 0;
+    color: white;
+    text-transform: uppercase;
+    font-size: $font-size-sm;
+    &:hover
+    {
+        background-color: yellow;
+    }
+}
+
+%flexhead
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}

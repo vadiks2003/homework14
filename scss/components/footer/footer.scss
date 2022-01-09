@@ -1,4 +1,45 @@
 .footer
 {
-    height: 260px;
+    //height: 260px;
+
+    &__navigation
+    {
+        @extend %flexnwrap;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .row{
+            justify-content: center;
+            margin-bottom: 30px;
+
+            a{
+                margin-right: 35px;
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+
+    &__links
+    {
+        margin-top: 25px;
+        margin-bottom: 55px;
+
+        a{ /* не работает(кликабельная картинка ) */
+            background-image: url("./../images/placeholderpng.png");
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    &__copyright
+    {
+        @extend %flexnwrap;
+        justify-content: center;
+        background-color: #709dca;
+        height: 45px;
+        align-items: center;
+        color: white;
+    }
 }

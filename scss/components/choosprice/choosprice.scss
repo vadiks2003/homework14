@@ -2,4 +2,82 @@
 {
     height: 900px;
     background-color: #e7edf3;
+
+    &__head
+    {
+        @extend %flexhead;
+        text-align: center;
+        padding-top: 140px;
+        h3{
+            font-size: $font-size-xl;
+            text-transform: uppercase;
+            font-weight: 800;
+
+        }
+        p{
+            color: $servicesgrey;
+        }
+    }
+
+    &__body
+    {
+        text-transform: uppercase;
+
+        .row
+        {
+            justify-content: center;
+        }
+
+        &__plan
+        {
+            width: 390px;
+            height: 440px;
+            background-color: white;
+            text-align: center;
+
+            margin-top: 55px;
+            .plan
+            {
+                margin-top: 55px;
+                font-size: $font-size-xl;
+                text-transform: uppercase;
+                font-weight: 100;
+                margin-bottom: 10px;
+                
+            }
+
+            .planprice
+            {
+                
+                color: $pricesyellow;
+                font-size: 42px;
+            }
+
+            .lastplanpricep
+            {
+                margin-bottom: 35px;
+            }
+            
+            &__button
+            {
+                @extend %yellowbutton;
+                 padding: 20px 20px;
+            }
+
+            &:hover
+            {
+                transition: all 0.2s ease-out;
+                height: 500px;
+                margin-top: 20px;
+                background-color: $selectedblue;
+                .planprice
+                {
+                    color: white;
+                }
+                .plan{
+                    margin-top: 90px;
+                }
+            }
+        }
+    }
 }

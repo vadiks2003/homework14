@@ -24,7 +24,10 @@
         
     }
 
-    
+    .row
+    {
+        justify-content: center;
+    }
 
     &__input
     {
@@ -65,17 +68,7 @@
             
 
             &.submit{
-                background-color: $selected;
-                padding-left: 0;
-                margin-bottom: 0;
-                color: white;
-                text-transform: uppercase;
-                font-size: $font-size-sm;
-
-                &:hover
-                {
-                    background-color: yellow;
-                }
+                @extend %yellowbutton;
 
             }
         }
