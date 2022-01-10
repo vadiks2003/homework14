@@ -24,6 +24,7 @@
         img{
 
         }
+
         &__client
         {
             width: 570px;
@@ -31,29 +32,35 @@
             background-color: white;
             margin-right: 36px;
             margin-bottom: 20px;
+
             &__img
             {
                 margin-left: 30px;
                 margin-top: 40px;
                 float: left;
             }
+
             &__descr
             {
                 margin-top: 50px;
                 margin-left: 30px;
+
                 p{
                     font-size: $font-size-sm;
                     max-width: 350px;
                 }
-                :last-child
+
+                .descr_role
                 {
                     margin-top: 30px;
                 }
+
                 &__name
                 {
                     text-transform: uppercase;
                     color: orange;
                 }
+                
                 &__role
                 {
                     text-transform: uppercase;

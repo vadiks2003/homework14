@@ -57,13 +57,3 @@
     }
 }
 
-
-@media(max-width:$breakpoint-xxl)
-{
-    .ourservices__text
-    {
-        &__item{
-            max-width: 412px;
-        }
-    }
-}

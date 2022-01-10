@@ -1,0 +1,10 @@
+
+@include huge
+{
+    .ourservices__text
+    {
+        &__item{
+            max-width: 412px;
+        }
+    }
+}

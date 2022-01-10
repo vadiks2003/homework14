@@ -8,18 +8,18 @@
     <link rel="stylesheet" href="./../styles/index.css">
 </head>
 <body>
-    <header>
+    <header id="home">
         <div class="navigation__container">
             <div class="row">
                 <img src="./../images/logo.png" alt="" class="navigation__img">
                 <div class="navigation__wrapper">
-                    <a href="#" class="navigation__item">Home</a>
-                    <a href="#" class="navigation__item">Service</a>
-                    <a href="#" class="navigation__item">About Us</a>
-                    <a href="#" class="navigation__item">Pricing table</a>
-                    <a href="#" class="navigation__item">How it work</a>
-                    <a href="#" class="navigation__item">Happy clients</a>
-                    <a href="#" class="navigation__item">Contact Us</a>
+                    <a href="#home" class="navigation__item">Home</a>
+                    <a href="#ourservices" class="navigation__item">Service</a>
+                    <a href="#aboutus" class="navigation__item">About Us</a>
+                    <a href="#choosprice" class="navigation__item">Pricing table</a>
+                    <a href="#howitworks" class="navigation__item">How it work</a>
+                    <a href="#happyclients" class="navigation__item">Happy clients</a>
+                    <a href="#footer" class="navigation__item">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -66,7 +66,7 @@
                 </div>
             </div>
         </div>
-        <div class="ourservices">
+        <div class="ourservices" id="ourservices">
             <div class="ourservices__head">
                 <h3>Our services</h3>
                 <p>Lorem Ipsum is simply dummy Business industry.</p>
@@ -112,7 +112,7 @@
             </div>
 
         </div>
-        <div class="aboutus">
+        <div class="aboutus" id="aboutus">
             <div class="row">
                 <div class="aboutus__img"></div>
                 <div class="aboutus__item">
@@ -124,7 +124,7 @@
                 </div>
             </div>
         </div>
-        <div class="choosprice">
+        <div class="choosprice" id="choosprice">
             <div class="choosprice__head">
                 <h3>choos your pric</h3>
                 <p>Lorem ipsum dolor sit amet.</p>
@@ -170,7 +170,7 @@
                 </div>
             </div>
         </div>
-        <div class="howitworks">
+        <div class="howitworks" id="howitworks">
             <div class="howitworks__head">
                 <h3>how it works</h3>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -202,7 +202,7 @@
                 </div>
             </div>
         </div>
-        <div class="happyclients">
+        <div class="happyclients" id="happyclients">
             <div class="happyclients__head">
                 <h3>happy clients</h3>
                 <p>we are explain who is using our business solutions</p>
@@ -214,11 +214,13 @@
                             <img src="./../images/placeholderpng.png" alt="">
                         </div>
                         <div class="happyclients__body__client__descr">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum ducimus repellendus odio, assumenda delectus facere velit reprehenderit veniam quis distinctio eum quasi, omnis blanditiis aut, sequi molestiae consectetur temporibus harum!</p>
-                            <p>
-                                <span class="happyclients__body__client__descr__name">Darwin Michle,</span>
-                                <span class="happyclients__body__client__descr__role">Project manager</span>
-                            </p>
+                            <div class="descr_wrapper">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum ducimus repellendus odio, assumenda delectus facere velit reprehenderit veniam quis distinctio eum quasi, omnis blanditiis aut, sequi molestiae consectetur temporibus harum!</p>
+                                <p class="descr_role">
+                                    <span class="happyclients__body__client__descr__name">Darwin Michle,</span>
+                                    <span class="happyclients__body__client__descr__role">Project manager</span>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -229,7 +231,7 @@
                         </div>
                         <div class="happyclients__body__client__descr">
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum ducimus repellendus odio, assumenda delectus facere velit reprehenderit veniam quis distinctio eum quasi, omnis blanditiis aut, sequi molestiae consectetur temporibus harum!</p>
-                            <p>
+                            <p class="descr_role">
                                 <span class="happyclients__body__client__descr__name">Madam Eliabeth,</span>
                                 <span class="happyclients__body__client__descr__role">Creative director</span>
                             </p>
@@ -243,7 +245,7 @@
                         </div>
                         <div class="happyclients__body__client__descr">
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum ducimus repellendus odio, assumenda delectus facere velit reprehenderit veniam quis distinctio eum quasi, omnis blanditiis aut, sequi molestiae consectetur temporibus harum!</p>
-                            <p>
+                            <p class="descr_role">
                                 <span class="happyclients__body__client__descr__name">Clips Arter,</span>
                                 <span class="happyclients__body__client__descr__role">Lipsum directer</span>
                             </p>
@@ -257,7 +259,7 @@
                         </div>
                         <div class="happyclients__body__client__descr">
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum ducimus repellendus odio, assumenda delectus facere velit reprehenderit veniam quis distinctio eum quasi, omnis blanditiis aut, sequi molestiae consectetur temporibus harum!</p>
-                            <p>
+                            <p class="descr_role">
                                 <span class="happyclients__body__client__descr__name">Zam Cristafr,</span>
                                 <span class="happyclients__body__client__descr__role">Manager</span>
                             </p>
@@ -266,7 +268,7 @@
                 </div>
             </div>
         </div>
-        <div class="newsettler">
+        <div class="newsettler" id="newsettler">
             <div class="newsettler__head">
                 <h3>newsettler</h3>
                 <p>Lorem ipsum dolor sit amet.</p>
@@ -297,7 +299,7 @@
         </div>
         <br>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="footer__navigation">
             <div class="row">
                 <a href="#">Home</a>

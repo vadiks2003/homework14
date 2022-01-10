@@ -1,0 +1,87 @@
+
+@include huge
+{
+    .contactframe{
+        height: 620px;
+
+        &__img
+        {
+            img{
+                width: 325px;
+                height: 175px;
+                margin-top: 125px;
+            }
+        }
+
+        &__input
+        {
+            .submit{
+                margin-left: 24px;
+            }
+
+            input{
+                width: 288px;
+            }
+
+            label{
+                margin-top: 20px; 
+            }
+        }
+    }
+}
+
+@include big
+{
+    .contactframe
+    {
+        height: 800px;
+        &__head
+        {
+            text-align: center;
+            p{
+                max-width: 500px;
+            }
+        }
+
+        &__input
+        {
+            .submit
+            {
+                margin-left: 132px;
+            }
+
+            label{
+                &::before{
+                    left: 28% !important;
+                }
+            }
+
+            input{
+                max-width: 270px;
+                margin: 0 116px;
+            }
+        }
+    }
+}
+
+
+@include small
+{
+    .contactframe
+    {
+        
+        &__head
+        {
+            p{
+                margin: 0 20px;
+            }
+        }
+
+        &__input
+        {
+            input{
+
+            }
+        }
+    }
+}

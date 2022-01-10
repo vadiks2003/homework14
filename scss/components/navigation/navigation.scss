@@ -10,13 +10,7 @@
             background-color: white;
             padding: 10px 20px;
             max-width: 80px;
-            &:hover
-            {
-                @extend %roundedges;
-                background-color: $selected;
-                color:white;
-                transition: all 0.6s;
-            }
+            @extend %btnhover;
         }
 
         &__wrapper
@@ -38,46 +32,6 @@
         &__img
         {
             display: inline-block;
-        }
-    }
-}
-
-@media(max-width:$breakpoint-xxl)
-{
-    .navigation
-    {
-        &__container
-        {
-            padding-top: 10px;
-        }  
-
-        &__item
-        {
-            padding: 0px 4px; 
-        }
-    }
-}
-
-@media(max-width:$breakpoint-xl)
-{
-    .navigation
-    {
-        &___container
-        {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-        }
-        &__img{
-            display: block;
-        }
-
-        &__item{
-             display: none;/*
-            display: block;
-            text-align: center;
-            max-width: 200px;
-            line-height: 40px;*/
         }
     }
 }

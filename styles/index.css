@@ -82,7 +82,7 @@ select {
   flex-wrap: wrap;
 }
 
-.contactframe__input, .navigation__container .row .navigation__item:hover {
+.contactframe__input, .footer__navigation .row a:hover, .navigation__container .row .navigation__item:hover {
   border: 0;
   border-radius: 6px;
 }
@@ -119,6 +119,12 @@ select {
   align-items: center;
 }
 
+.footer__navigation .row a:hover, .navigation__container .row .navigation__item:hover {
+  background-color: #ffbb42;
+  color: white;
+  transition: all 0.6s;
+}
+
 * {
   font-family: "open sans", sans-serif;
   font-size: 16px;
@@ -136,11 +142,6 @@ select {
   background-color: white;
   padding: 10px 20px;
   max-width: 80px;
-}
-.navigation__container .row .navigation__item:hover {
-  background-color: #ffbb42;
-  color: white;
-  transition: all 0.6s;
 }
 .navigation__container .row .navigation__wrapper {
   padding: 30px 0;
@@ -165,7 +166,7 @@ select {
   }
 }
 @media (max-width: 1024px) {
-  .navigation___container {
+  .navigation__container .row {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -252,6 +253,51 @@ select {
   height: 350px;
 }
 
+@media (max-width: 1250px) {
+  .contactframe {
+    height: 620px;
+  }
+  .contactframe__img img {
+    width: 325px;
+    height: 175px;
+    margin-top: 125px;
+  }
+  .contactframe__input .submit {
+    margin-left: 24px;
+  }
+  .contactframe__input input {
+    width: 288px;
+  }
+  .contactframe__input label {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .contactframe {
+    height: 800px;
+  }
+  .contactframe__head {
+    text-align: center;
+  }
+  .contactframe__head p {
+    max-width: 500px;
+  }
+  .contactframe__input .submit {
+    margin-left: 132px;
+  }
+  .contactframe__input label::before {
+    left: 28% !important;
+  }
+  .contactframe__input input {
+    max-width: 270px;
+    margin: 0 116px;
+  }
+}
+@media (max-width: 576px) {
+  .contactframe__head p {
+    margin: 0 20px;
+  }
+}
 @media (max-width: 1250px) {
   .contactframe {
     height: 620px;
@@ -516,7 +562,7 @@ select {
   font-size: 14px;
   max-width: 350px;
 }
-.happyclients__body__client__descr :last-child {
+.happyclients__body__client__descr .descr_role {
   margin-top: 30px;
 }
 .happyclients__body__client__descr__name {
@@ -585,7 +631,8 @@ select {
   margin-bottom: 30px;
 }
 .footer__navigation .row a {
-  margin-right: 35px;
+  padding: 10px 15px;
+  text-align: center;
   text-decoration: none;
   color: black;
 }
