@@ -29,14 +29,19 @@
 
             label
             {
-                margin-right: 10px;
-                line-height: 50px;
+                margin-right: 10px;                                    //       ...
+                line-height: 50px;                                     //     ..   ..
+                @include image("./../images/placeholderpng.png");      //         ..
+                &::before                                              //        ..
+                {                                                      //        ..
+                    margin-right:5px;                                  //    
+                }                                                      //        ..
                
                 input
                 {
                     padding-left: 40px;
                     width: 300px;
-                    @include image("./../images/placeholderpng.png");
+                    
                 }
             }
 

@@ -1,0 +1,21 @@
+@include huge
+{
+    .happyclients
+    {
+        &__body
+        {
+            margin: 0 40px;
+            &__client
+            {
+                width: 400px;
+
+                &__descr
+                {
+                    
+                    position: relative;
+                    top: 10px;
+                }
+            }
+        }
+    }
+}

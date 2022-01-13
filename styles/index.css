@@ -87,7 +87,7 @@ select {
   border-radius: 6px;
 }
 
-.newsettler__body .row label input:not(:last-child)::before, .contactframe__input__phone:not(:last-child)::before, .contactframe__input__email:not(:last-child)::before, .contactframe__input__name:not(:last-child)::before {
+.newsettler__body .row label:not(:last-child)::before, .contactframe__input__phone:not(:last-child)::before, .contactframe__input__email:not(:last-child)::before, .contactframe__input__name:not(:last-child)::before {
   content: "";
   display: inline-block;
   width: 26px;
@@ -416,8 +416,8 @@ select {
   text-decoration: none;
   color: white;
   text-transform: uppercase;
-  padding: 10px 5px;
-  border: black 3px solid;
+  padding: 12px 25px;
+  border: grey 0.5px solid;
 }
 .aboutus__item p {
   margin-right: 266px;
@@ -432,6 +432,11 @@ select {
   width: 50%;
 }
 
+@media (max-width: 1250px) {
+  .aboutus__item p {
+    margin-right: 50px;
+  }
+}
 .choosprice {
   height: 900px;
   background-color: #e7edf3;
@@ -574,6 +579,18 @@ select {
   color: grey;
 }
 
+@media (max-width: 1250px) {
+  .happyclients__body {
+    margin: 0 40px;
+  }
+  .happyclients__body__client {
+    width: 400px;
+  }
+  .happyclients__body__client__descr {
+    position: relative;
+    top: 10px;
+  }
+}
 .newsettler {
   height: 950px;
   background-color: white;
@@ -597,12 +614,15 @@ select {
   margin-right: 10px;
   line-height: 50px;
 }
+.newsettler__body .row label::before {
+  background-image: url("./../images/placeholderpng.png");
+}
+.newsettler__body .row label::before {
+  margin-right: 5px;
+}
 .newsettler__body .row label input {
   padding-left: 40px;
   width: 300px;
-}
-.newsettler__body .row label input::before {
-  background-image: url("./../images/placeholderpng.png");
 }
 .newsettler__body .row a {
   padding: 20px 50px;
